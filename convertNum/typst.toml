@@ -1,0 +1,9 @@
+[package]
+name = "convertNum"
+version = "0.1.0"
+entrypoint = "convertNum.typ"
+authors = ["me"]
+license = "UnLicense"
+description = "アラビア数字をアルファベットやローマ数字に変換する"
+repository = "https://github.com/fkasatt/myTypstConf"
+keywords = ["template"]

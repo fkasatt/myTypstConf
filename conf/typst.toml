@@ -1,0 +1,9 @@
+[package]
+name = "conf"
+version = "0.1.0"
+entrypoint = "conf.typ"
+authors = ["me"]
+license = "MIT"
+description = "普段設定"
+repository = "https://github.com/fkasatt/myTypstConf"
+keywords = ["template"]

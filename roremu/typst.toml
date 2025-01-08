@@ -1,0 +1,9 @@
+[package]
+name = "roremu"
+version = "0.1.2"
+entrypoint = "roremu.typ"
+authors = ["me"]
+license = "Unlicense"
+description = "小栗虫太郎『黒死館殺人事件』から抜粋したroremu。https://github.com/mkpoli/roremuから改造"
+repository = "https://github.com/fkasatt/myTypstConf"
+keywords = ["lorem", "japanese", "roremu"]

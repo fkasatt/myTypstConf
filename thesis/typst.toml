@@ -1,0 +1,9 @@
+[package]
+name = "thesis"
+version = "0.1.1"
+entrypoint = "thesis.typ"
+authors = ["me"]
+license = "MIT"
+description = "卒論用に作成した設定。"
+repository = "https://github.com/fkasatt/myTypstConf"
+keywords = ["template"]

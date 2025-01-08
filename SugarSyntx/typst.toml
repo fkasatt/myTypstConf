@@ -1,0 +1,9 @@
+[package]
+name = "SugarSyntax"
+version = "0.1.1"
+entrypoint = "SugarSyntax.typ"
+authors = ["me"]
+license = "UnLicense"
+description = "個人的にレポートでよく使う数学記号"
+repository = "https://github.com/fkasatt/myTypstConf"
+keywords = ["template"]

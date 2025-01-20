@@ -1,6 +1,6 @@
 [package]
 name = "roremu"
-version = "0.1.2"
+version = "0.1.0"
 entrypoint = "roremu.typ"
 authors = ["me"]
 license = "Unlicense"

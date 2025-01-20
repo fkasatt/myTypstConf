@@ -1,10 +1,10 @@
 #import "@preview/codly:1.1.1": codly-init, codly
 #import "@preview/numbly:0.1.0": numbly
-#import "@local/SugarSyntax:0.1.1": *
+#import "@local/SugarSyntax:0.1.0": *
 
-#let mincho = ("Nimbus Roman", "Zen Old Mincho", "Noto Serif CJK JP")
-#let gothic = ("Nimbus Sans", "LINE Seed JP_TTF", "Noto Sans CJK JP")
-#let titleFonts = ("Nimbus Roman", "LINE Seed JP_TTF")
+#let mincho = ("Times New Roman", "Zen Old Mincho", "Noto Serif CJK JP")
+#let gothic = ("IBM Plex Sans", "LINE Seed JP_TTF", "Noto Sans CJK JP")
+#let titleFonts = ("Times New Roman", "LINE Seed JP_TTF")
 #let rawCode = "PlemolJP Console NF"
 
 #let jisage(content, space: -0.65em) = {
@@ -43,7 +43,7 @@
 
   // フォント設定
   set text(size: fontSize, lang: "ja", font: textFonts)
-  show emph: set text(font: ("Nimbus Roman", "PlemolJP Console NF"))
+  show emph: set text(font: ("Times New Roman", "PlemolJP Console NF"))
   show strong: set text(font: gothic, size: 0.95em)
   set strong(delta: 200)
   show raw: set text(font: rawCode, weight: "medium")
@@ -57,7 +57,7 @@
 
   // 図表キャプション
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.caption: set text(size: 0.9em, font: "UDEV Gothic 35NF", weight: "semibold")
+  show figure.caption: set text(size: 0.9em, font: "UDEV Gothic 35HSJPDOC", weight: "semibold")
   show figure.where(kind: table): set figure(placement: bottom, supplement: [表#h(-0.3em)])
   show figure.where(kind: image): set figure(placement: bottom, supplement: [図#h(-0.3em)])
 
@@ -130,7 +130,7 @@
 
 // 図表共通
 #let withid(cap, content, id: none) = [
-  #set text(font: "UDEV Gothic 35NF", size: 0.9em)
+  #set text(font: "UDEV Gothic 35HSJPDOC", size: 0.9em)
 
   #align(center)[#figure(caption: cap, content)#label(
     if id == none {
@@ -143,7 +143,7 @@
 
 // テーブルブロック
 #let tbl(cap, content, id: none, typeB: false) = [
-  #show strong: set text(font: "UDEV Gothic 35NF", size: 0.9em, weight: "bold")
+  #show strong: set text(font: "UDEV Gothic 35HSJPDOC", size: 0.9em, weight: "bold")
 
   #set table(
     stroke: 1pt,

@@ -14,7 +14,7 @@ cp $HOME/typst/miniConf.typ src/
 
 cat > main.typ << EOF
 #import "@local/conf:0.1.0": *
-#import "src/minioConf.typ": *
+#import "src/miniConf.typ": *
 
 #show: pageSettings.with(title: [], author: "", titleDisplay: true, date: datetime(year: 2025, month: , day: ), id: "")
 
@@ -23,7 +23,7 @@ EOF
 
 cat > src/template.typ << EOF
 #import "@local/conf:0.1.0": *
-#import "src/minioConf.typ": *
+#import "src/miniConf.typ": *
 
 #show: pageSettings.with(title: [], author: "", titleDisplay: true, date: datetime(year: 2025, month: , day: ), id: "")
 

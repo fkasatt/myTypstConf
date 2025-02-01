@@ -1,14 +1,4 @@
-#let withid(cap, content, id: none) = [
-  #set text(font: "UDEV Gothic 35NF", size: 0.9em)
-
-  #align(center)[#figure(caption: cap, content)#label(
-    if id == none {
-      cap
-    } else {
-      id
-    }
-  )]
-]
+#import "@local/conf:0.1.0": withid
 
 #let img(cap, type: "png", id: none, src: none, width: auto, height: 100pt) = [
   #withid(

@@ -1,0 +1,5 @@
+[package]
+name = "bxbib"
+version = "0.2.2"
+authors = ["zr-tex8r"]
+entrypoint = "bxbib.typ"

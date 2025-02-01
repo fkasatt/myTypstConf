@@ -30,5 +30,15 @@ cat > src/template.typ << EOF
 #tbl("説明", table(
   columns: 3,
   [], [], [],
-))
+), typeB: true)
+
+#img("01_これは画像です", id: "hoge")
+
+
+スゴイ論文[@bib1]や もっとスゴイ論文[@bib2]によると、
+
+#bxbib[
+  #bib-item(<bib1>)[某有名教授. スゴイ論文, 2024]
+  #bib-item(<bib2>)[某有名教授. もっとスゴイ論文, 2024]
+]
 EOF

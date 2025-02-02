@@ -25,6 +25,18 @@ cat > src/template.typ << EOF
 #import "@local/conf:0.1.0": *
 #import "src/miniConf.typ": *
 
+/*
+  title: [],
+  author: "",
+  id: "",
+  date: datetime.today(),
+  titleDisplay: false,
+  textFonts: mincho,
+  fontSize: 9pt,
+  colnum: 2,
+  pageMargin: auto,
+*/
+
 #show: pageSettings.with(title: [], author: "", titleDisplay: true, date: datetime(year: 2025, month: , day: ), id: "")
 
 #tbl("説明", table(

@@ -85,6 +85,7 @@
     // The figure (i.e. bib-item) is laid out here.
     show figure.where(kind: figure-kind): it => {
       set text(size: 0.9em)
+      set par(leading: 0.5em)
       assert(it.body.func() == metadata)
 
       let width = (

@@ -133,7 +133,7 @@
     stroke: 1pt,
     inset: 0.5em,
     fill: (x, y) =>
-      if y == 0 or (x == 0 and typeB) {
+      if y == 0 or (x == 0 and not typeB) {
         gray.lighten(50%)
       }
   )

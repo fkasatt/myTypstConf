@@ -31,7 +31,9 @@
 
   // フォント設定
   set text(size: fontSize, lang: "ja", font: textFonts)
-  show emph: set text(font: ("Times New Roman", "PlemolJP Console NF"))
+  show emph: it => [
+    #highlight[#it]
+  ]
   show strong: set text(font: gothic, size: 0.95em)
   set strong(delta: 200)
   show raw: set text(font: rawCode, weight: "medium")
@@ -46,8 +48,8 @@
   // 図表キャプション
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.caption: set text(size: 0.9em, font: "UDEV Gothic 35HSJPDOC", weight: "semibold")
-  show figure.where(kind: table): set figure(supplement: [表#h(-0.1em)])
-  show figure.where(kind: image): set figure(supplement: [図#h(-0.1em)])
+  show figure.where(kind: table): set figure(supplement: [表#h(-0.5em)])
+  show figure.where(kind: image): set figure(supplement: [図#h(-0.5em)])
 
   // 章タイトル
   set heading(numbering: numbly(
@@ -113,12 +115,12 @@
 
 
 // 図表共通
-#let withid(cap, content, id: none) = [
+#let withid(cap, content, id: "") = [
   #set text(font: "UDEV Gothic 35HSJPDOC", size: 0.9em)
 
   #align(center)[#figure(caption: cap, content)#label(
-    if id == none {
-      cap
+    if id == "" {
+      cap.text
     } else {
       id
     }
@@ -126,20 +128,20 @@
 ]
 
 // テーブルブロック
-#let tbl(cap, content, id: none, typeB: false) = [
+#let tbl(cap, content, id: "", type: 1) = [
   #show strong: set text(font: "UDEV Gothic 35HSJPDOC", size: 0.9em, weight: "bold")
 
   #set table(
     stroke: 1pt,
     inset: 0.5em,
     fill: (x, y) =>
-      if y == 0 or (x == 0 and not typeB) {
+      if (y == 0 and type != 3) or (x == 0 and type == 2) {
         gray.lighten(50%)
       }
   )
 
   #show table.cell: it => {
-    if it.y == 0 or (it.x == 0 and typeB) {
+    if (it.y == 0 and type != 3) or (it.x == 0 and type == 2) {
       align(center)[*#it*]
     } else {
       it

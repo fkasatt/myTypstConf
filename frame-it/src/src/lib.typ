@@ -33,7 +33,8 @@
   import "layout.typ": frame-factory
 
   for (id, supplement, color) in fill-missing-colors(base-color, frames) {
-    ((id): frame-factory(kind, supplement, color))
+    // ((id): frame-factory(kind, supplement, color))
+    ((id): frame-factory(id, supplement, color))
   }
 }
 

@@ -42,12 +42,12 @@ cat > src/template.typ << EOF
 )
 #show: frame-style(styles.boxy)
 
-#tbl("説明", table(
+#tbl([説明], table(
   columns: 3,
   [], [], [],
-), typeB: true)
+), type: 3)
 
-#img("01_これは画像です", id: "hoge")
+#img([01_これは画像です], id: "hoge")
 
 #def[title][tag1][tag2][
   文章1

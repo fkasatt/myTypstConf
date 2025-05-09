@@ -1,4 +1,4 @@
-#import "@preview/numbly:0.1.0": numbly
+//#import "@preview/numbly:0.1.0": numbly
 #import "@local/SugarSyntax:0.1.0": *
 #import "@local/bxbib:0.2.2": *
 
@@ -52,11 +52,12 @@
   show figure.where(kind: image): set figure(supplement: [図#h(-0.5em)])
 
   // 章タイトル
-  set heading(numbering: numbly(
-    "{1} ",
-    "{2}.",
-    "{3})"
-  ))
+  // set heading(numbering: numbly(
+  //   "{1} ",
+  //   "{2}.",
+  //   "{3})"
+  // ))
+  set heading(numbering: "1.1")
 
   show heading: it => {
     set text(font: titleFonts)

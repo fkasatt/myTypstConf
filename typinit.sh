@@ -32,13 +32,15 @@ cat > src/template.typ << EOF
 
 #show: pageSettings.with(title: [], author: "", titleDisplay: true, date: datetime(year: 2025, month: , day: ), id: "")
 
-#let (def, theorem, exam, exq, ques, summary) = frames(
+#let (def, word, prop, theorem, proof, summary, exq, ques) = frames(
   def: ("定義"),
-  theorem: ("定理"),
-  exam: ("例"),
+  word: ("用語"),
+  prop: ("性質"),
+  theorem: ("公式"),
+  proof: ("証明"),
+  summary: ("要点"),
   exq: ("例題", gray),
-  ques: ("問"),
-  summary: ("まとめ")
+  ques: ("問題", black)
 )
 #show: frame-style(styles.boxy)
 
